@@ -19,7 +19,7 @@ function JsonTreeBuilder() {
             }
             return ul;
         } else {
-            var v = data || '[empty]';
+            var v = (data == undefined) ? '[empty]' : data;
             var textNode = document.createTextNode(' : ' + v);
             return textNode;
         }
